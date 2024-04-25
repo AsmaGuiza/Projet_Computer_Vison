@@ -1,0 +1,125 @@
+:root {
+  --container-width: 100%;
+  --card-max-width: 800px; /* Adjust this value as needed */
+}
+
+.container-performance {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+img {
+  width: 700px;
+  max-width: var(--card-max-width); /* Use the variable for max-width */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+img {
+  transform: scale(1.05);
+}
+
+.text {
+  width: 60%;
+  max-width: 60%;
+  text-align: top; /* Cela semble incorrect. Assurez-vous que c'est ce que vous voulez. */
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2em;
+  transition: transform 0.3s ease-in-out;
+  font-size: 100%;
+  margin-left: 5%;
+  border: 2px solid black; /* Ajoute une bordure de 1 pixel solide en noir */
+}
+
+
+.text h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.text h4 {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .text {
+    padding: 20px 40px; /* Increase padding on larger screens */
+  }
+}
+
+
+.accuracy h4,
+.accuracy p {
+  display: flex;
+  width: 100%;
+}
+
+.image-container {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+@media (min-width: 768px) {
+  :root {
+    --container-width: 90%;
+    --card-max-width: 600px;
+  }
+
+
+  .container-result {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  img {
+    max-width: 100%; /* Set the maximum width of the image to 100% */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}
